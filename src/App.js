@@ -1,24 +1,62 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import "./app.css"
+import Button from "react-bootstrap/Button";
+import React, { useState, useRef } from 'react';
 
 function App() {
+  const NameRef = useRef()
+  const SurnameRef = useRef()
+  const AgeRef = useRef()
+  const SalaryRef = useRef()
+  const [workers, setWorkers] = useState([{ name: "Jan", surname: "Kowalski", age: 22, salary: 2500}]);
+  const [NameValue, setNameValue] = useState()
+  const [SurnameValue, setSurnameValue] = useState()
+  const [AgeValue, setAgeValue] = useState()
+  const [SalaryValue, setSalaryValue] = useState()
+  const getNameValue = (e) => {
+    setNameValue(e.target.value)
+  }
+  const getSurnameValue = (e) => {
+    setSurnameValue(e.target.value)
+  }
+  const getAgeValue = (e) => {
+    setAgeValue(e.target.value)
+  }
+  const getSalaryValue = (e) => {
+    setSalaryValue(e.target.value)
+  }
+  const addNewUser = () => {
+    let newWorker = { name: NameValue, surname: SurnameValue, age: AgeValue, salary: SalaryValue }
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className='main-container' >
+        <div className='heading-container'>
+          <h1 className='main-heading'>Our Workers</h1>
+        </div>
+        <div className='users-and-input-container'>
+          <div className='user-info-container'>
+            <label className='user-label'>Name:</label>
+            <input ref={NameRef} onChange={getNameValue} className="user-info-input" type="text" />
+            <label className='user-label'>Surname:</label>
+            <input ref={SurnameRef} onChange={getSurnameValue} className="user-info-input" type="text" />
+            <label className='user-label'>Age:</label>
+            <input ref={AgeRef} onChange={getAgeValue} className="user-info-input" type="number" />
+            <label className='user-label'>Salary  :</label>
+            <input ref={SalaryRef} onChange={getSalaryValue} className="user-info-input" type="number" />
+            <Button onClick={addNewUser} variant='btn btn-outline-info' className="adding-user-button">Add new user!</Button>
+          </div>
+          <div className='container-showing-users'>
+            {workers.map((value) => {
+              return Object.keys(value).map((key) => {
+                return <div key={key} className='user-info-in-container'><p>{key}: {value[key]}</p></div>
+              })
+            })
+            }
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 

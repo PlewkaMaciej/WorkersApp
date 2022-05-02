@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0; 
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-container{
+    
+    height: 100vh;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-heading{
+    color:aqua;
+    font-weight: bold;
+    font-size: 80px;
+   margin-top: 3%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.user-info-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 600px;
+    margin-top:5% ;
+    margin-left: 5%;
+    align-items: center;
 }
-
-.App-link {
-  color: #61dafb;
+.heading-container{
+    display: flex;
+    justify-content: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.user-info-input{
+    margin-top: 10px;
+    border-radius: 5px;
+    border-color: aqua;
+    color: aqua;
+    font-size: 16px;
+    width: 300px;
+}
+.user-label{
+    color: aqua;
+    font-weight: bold;
+}
+.adding-user-button{
+    margin-top: 8px;
+}
+.container-showing-users{
+    min-width: 800px;
+    min-height: 600px;
+    border: 1px;
+    border-color: aqua;
+    border-style: groove;
+   color:aqua;
+    border-radius: 20px;
+    flex-direction: row;
+    display: flex;
+}
+.users-and-input-container{
+    display: flex;
+    flex-direction: row;
+}
+.user-info-in-container{
+    margin-left: 10px;
+    font-weight: bolder;
 }
