@@ -13,7 +13,16 @@ function App() {
   const addNewUser = () => {
     let newWorker = newWorkerInfo
     setWorkers(prevworkers => [...prevworkers, newWorker])
+    SalaryRef.current.value = null
+    AgeRef.current.value = null
+    SurnameRef.current.value = ""
+    NameRef.current.value = ""
   }
+  const DeleteWorker=((e)=>{
+    let newList = workers
+    newList.splice(e.target.id,1)
+    setWorkers([...newList])
+  })
   return (
     <>
       <div className='main-container' >
@@ -33,13 +42,14 @@ function App() {
             <Button onClick={addNewUser} variant='btn btn-outline-info' className="adding-user-button">Add new user!</Button>
           </div>
           <div className='container-showing-users'>
-            {workers.map((value) => {
+            {workers.map((value,id) => {
               return (
-                <div className='user-info-in-container' key={value}>
-
+                <div className='user-info-in-container' key={id}>
+                      
                   {Object.keys(value).map((key) => {
-                    return <p key={key} >{key}: {value[key]} </p>
+                    return <p key={key} >{key}: {value[key]} </p> 
                   })}
+                   <Button  onClick={DeleteWorker}  className="delete-user-button" variant='btn btn-outline-info' id={id}>X</Button>
                 </div >
               )
 
