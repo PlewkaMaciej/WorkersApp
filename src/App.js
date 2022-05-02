@@ -9,24 +9,9 @@ function App() {
   const AgeRef = useRef()
   const SalaryRef = useRef()
   const [workers, setWorkers] = useState([{ name: "Jan", surname: "Kowalski", age: 22, salary: 2500 }]);
-  const [NameValue, setNameValue] = useState()
-  const [SurnameValue, setSurnameValue] = useState()
-  const [AgeValue, setAgeValue] = useState()
-  const [SalaryValue, setSalaryValue] = useState()
-  const getNameValue = (e) => {
-    setNameValue(e.target.value)
-  }
-  const getSurnameValue = (e) => {
-    setSurnameValue(e.target.value)
-  }
-  const getAgeValue = (e) => {
-    setAgeValue(e.target.value)
-  }
-  const getSalaryValue = (e) => {
-    setSalaryValue(e.target.value)
-  }
+  const [newWorkerInfo, setNewWorkerInfo] = useState({ name: "", surname: "", age: 0, salary: 0 })
   const addNewUser = () => {
-    let newWorker = { name: NameValue, surname: SurnameValue, age: AgeValue, salary: SalaryValue }
+    let newWorker = newWorkerInfo
     setWorkers(prevworkers => [...prevworkers, newWorker])
   }
   return (
@@ -38,13 +23,13 @@ function App() {
         <div className='users-and-input-container'>
           <div className='user-info-container'>
             <label className='user-label'>Name:</label>
-            <input ref={NameRef} onChange={getNameValue} className="user-info-input" type="text" />
+            <input ref={NameRef} onChange={e => setNewWorkerInfo({ ...newWorkerInfo, name: e.target.value })} className="user-info-input" type="text" />
             <label className='user-label'>Surname:</label>
-            <input ref={SurnameRef} onChange={getSurnameValue} className="user-info-input" type="text" />
+            <input ref={SurnameRef} onChange={e => setNewWorkerInfo({ ...newWorkerInfo, surname: e.target.value })} className="user-info-input" type="text" />
             <label className='user-label'>Age:</label>
-            <input ref={AgeRef} onChange={getAgeValue} className="user-info-input" type="number" />
+            <input ref={AgeRef} onChange={e => setNewWorkerInfo({ ...newWorkerInfo, age: e.target.value })} className="user-info-input" type="number" />
             <label className='user-label'>Salary  :</label>
-            <input ref={SalaryRef} onChange={getSalaryValue} className="user-info-input" type="number" />
+            <input ref={SalaryRef} onChange={e => setNewWorkerInfo({ ...newWorkerInfo, salary: e.target.value })} className="user-info-input" type="number" />
             <Button onClick={addNewUser} variant='btn btn-outline-info' className="adding-user-button">Add new user!</Button>
           </div>
           <div className='container-showing-users'>
@@ -53,7 +38,7 @@ function App() {
                 <div className='user-info-in-container' key={value}>
 
                   {Object.keys(value).map((key) => {
-                    return <p key={key} >{key}: {value [key]} </p>
+                    return <p key={key} >{key}: {value[key]} </p>
                   })}
                 </div >
               )
