@@ -8,7 +8,7 @@ function App() {
   const SurnameRef = useRef()
   const AgeRef = useRef()
   const SalaryRef = useRef()
-  const [workers, setWorkers] = useState([{ name: "Jan", surname: "Kowalski", age: 22, salary: 2500}]);
+  const [workers, setWorkers] = useState([{ name: "Jan", surname: "Kowalski", age: 22, salary: 2500 }]);
   const [NameValue, setNameValue] = useState()
   const [SurnameValue, setSurnameValue] = useState()
   const [AgeValue, setAgeValue] = useState()
@@ -27,6 +27,7 @@ function App() {
   }
   const addNewUser = () => {
     let newWorker = { name: NameValue, surname: SurnameValue, age: AgeValue, salary: SalaryValue }
+    setWorkers(prevworkers => [...prevworkers, newWorker])
   }
   return (
     <>
@@ -48,9 +49,16 @@ function App() {
           </div>
           <div className='container-showing-users'>
             {workers.map((value) => {
-              return Object.keys(value).map((key) => {
-                return <div key={key} className='user-info-in-container'><p>{key}: {value[key]}</p></div>
-              })
+              return (
+                <div className='user-info-in-container' key={value}>
+
+                  {Object.keys(value).map((key) => {
+                    return <p key={key} >{key}: {value [key]} </p>
+                  })}
+                </div >
+              )
+
+
             })
             }
           </div>

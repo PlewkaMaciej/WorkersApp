@@ -1,31 +1,36 @@
-*{
+* {
     margin: 0;
-    padding: 0; 
+    padding: 0;
 }
-.main-container{
-    
+
+.main-container {
+
     height: 100vh;
 }
-.main-heading{
-    color:aqua;
+
+.main-heading {
+    color: aqua;
     font-weight: bold;
     font-size: 80px;
-   margin-top: 3%;
+    margin-top: 3%;
 }
-.user-info-container{
+
+.user-info-container {
     display: flex;
     flex-direction: column;
     justify-content: left;
     width: 600px;
-    margin-top:5% ;
+    margin-top: 5%;
     margin-left: 5%;
     align-items: center;
 }
-.heading-container{
+
+.heading-container {
     display: flex;
     justify-content: center;
 }
-.user-info-input{
+
+.user-info-input {
     margin-top: 10px;
     border-radius: 5px;
     border-color: aqua;
@@ -33,29 +38,37 @@
     font-size: 16px;
     width: 300px;
 }
-.user-label{
+
+.user-label {
     color: aqua;
     font-weight: bold;
 }
-.adding-user-button{
+
+.adding-user-button {
     margin-top: 8px;
 }
-.container-showing-users{
+
+.container-showing-users {
     min-width: 800px;
     min-height: 600px;
     border: 1px;
     border-color: aqua;
     border-style: groove;
-   color:aqua;
+    color: aqua;
     border-radius: 20px;
-    flex-direction: row;
+    flex-direction: column;
     display: flex;
 }
-.users-and-input-container{
+
+.users-and-input-container {
     display: flex;
     flex-direction: row;
 }
-.user-info-in-container{
-    margin-left: 10px;
+
+.user-info-in-container {
     font-weight: bolder;
+    display: flex;
+    gap: 6px;
+    margin-left: 8px;
+    margin-top: 8px;
 }
