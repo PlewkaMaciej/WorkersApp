@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import "./app.css"
+import "./App.css"
 import Button from "react-bootstrap/Button";
 import React, { useState, useRef } from 'react';
 
