@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/WorkersApp/static/css/main.ff17ab88.css",
+    "main.js": "/WorkersApp/static/js/main.6bf0e31d.js",
+    "index.html": "/WorkersApp/index.html",
+    "main.ff17ab88.css.map": "/WorkersApp/static/css/main.ff17ab88.css.map",
+    "main.6bf0e31d.js.map": "/WorkersApp/static/js/main.6bf0e31d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ff17ab88.css",
+    "static/js/main.6bf0e31d.js"
+  ]
+}
