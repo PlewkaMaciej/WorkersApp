@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/WorkersApp/static/css/main.ff17ab88.css",
-    "main.js": "/WorkersApp/static/js/main.6bf0e31d.js",
-    "index.html": "/WorkersApp/index.html",
-    "main.ff17ab88.css.map": "/WorkersApp/static/css/main.ff17ab88.css.map",
-    "main.6bf0e31d.js.map": "/WorkersApp/static/js/main.6bf0e31d.js.map"
+    "main.css": "/PlewkaMaciej.github.io/WorkersApp/static/css/main.ff17ab88.css",
+    "main.js": "/PlewkaMaciej.github.io/WorkersApp/static/js/main.6bf0e31d.js",
+    "index.html": "/PlewkaMaciej.github.io/WorkersApp/index.html",
+    "main.ff17ab88.css.map": "/PlewkaMaciej.github.io/WorkersApp/static/css/main.ff17ab88.css.map",
+    "main.6bf0e31d.js.map": "/PlewkaMaciej.github.io/WorkersApp/static/js/main.6bf0e31d.js.map"
   },
   "entrypoints": [
     "static/css/main.ff17ab88.css",
